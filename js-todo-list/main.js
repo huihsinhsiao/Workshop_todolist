@@ -3,7 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     e.target.classList.toggle('checked');
   })
 
-  document.querySelector('.close').addEventListener('click', function(e) {
-    e.target.
+  const cols = document.querySelectorAll('li')
+  cols.forEach(function(e) {
+    e.addEventListener('click', function(e) {
+      // debugger
+      e.target.parentElement.remove();
+    })
   })
 })
